@@ -1,0 +1,43 @@
+{
+  "name": "typescript-express-rest",
+  "version": "1.0.0",
+  "main": "./src/app.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon  ./src/app.ts --exec ts-node  --no-cache  --ignore=./config",
+    "build": "tsc",
+    "tslint": "tslint  -p src/*.ts --fix"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "",
+      "pre-commit": [
+        "tslint"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkou": [],
+      "post-merge": []
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "joi": "^13.0.1",
+    "log4js": "^1.1.1",
+    "method-override": "^2.3.9"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/config": "0.0.32",
+    "@types/cors": "^2.8.1",
+    "@types/joi": "^10.4.4",
+    "@types/log4js": "0.0.33",
+    "@types/method-override": "0.0.30",
+    "pre-commit": "^1.2.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2"
+  }
+}
