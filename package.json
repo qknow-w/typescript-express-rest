@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon  ./src/app.ts --exec ts-node  --no-cache  --ignore=./config",
     "build": "tsc",
-    "tslint": "tslint  -p src/*.ts --fix"
+    "tslint": "jake lint"
   },
   "config": {
     "pre-git": {
@@ -36,6 +36,7 @@
     "@types/joi": "^10.4.4",
     "@types/log4js": "0.0.33",
     "@types/method-override": "0.0.30",
+    "jake": "^8.0.15",
     "pre-commit": "^1.2.2",
     "tslint": "^5.7.0",
     "typescript": "^2.4.2"
